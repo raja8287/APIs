@@ -7,12 +7,8 @@ const PORT=5000;
 
 
 
-app.get("/",(req,resp)=>{
-    resp.json({
-        message:"API IS LIVEE"
-    })
-});
-app.get("/data",async(req,resp)=>{
+
+app.get("/",async(req,resp)=>{
     console.log(req.body)
     const da=await dm.find()
     resp.json({
