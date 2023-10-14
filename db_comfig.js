@@ -1,9 +1,14 @@
 
 import mongoose from "mongoose";
-mongoose.connect("mongodb://localhost:27017/Backend");
+import { config } from "dotenv";
+config({
+    path:"./config.env"
+})
+mongoose.connect(process.env.MM_A);
 
 const user=new mongoose.Schema({
-Num:Number
+Name:String,
+Email:String
 });
 
 
