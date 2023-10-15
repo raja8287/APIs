@@ -3,11 +3,12 @@ import mongoose from "mongoose";
 import { dm } from "./db_comfig.js";
 import Jwt from "jsonwebtoken";
 import {config} from 'dotenv';
-
+import cors from 'cors';
 
 const app=express();
 
 app.use(express.json())
+app.use(cors())
 //app.use(express.urlencoded({extended:true}));
 config({
     path:"./config.env",
